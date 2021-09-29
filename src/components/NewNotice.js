@@ -106,7 +106,7 @@ class NewNotice extends Component {
                     this.props.fillNotice(
                       id,
                       this.state.clientName,
-                      this.state.serviceDate,
+                      this.state.serviceDate.split("-").reverse().join("-"),
                       this.state.comment,
                       this.state.signTechnician,
                       this.state.signClient

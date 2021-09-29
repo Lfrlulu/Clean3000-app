@@ -19,17 +19,20 @@ class Notice extends Component {
                 <div className="container padding-5">
                     <div className="notice-container">
 
-                        <ReactToPrint
-                            trigger={() => {
-                                return <button>Imprimer ceci</button>;
-                            }}
-                            content={() => this.componentRef}
-                        />
+
                         <NoticeDetails
                             ref={el => (this.componentRef = el)}
                             notice={this.props.notices[index]}
                         />
+                        <ReactToPrint
+                            trigger={() => {
+                                return <button className="margin-top-2">Imprimer l'avis de passage</button>;
+                            }}
+                            content={() => this.componentRef}
+                        />
+
                     </div>
+
                 </div>
             </div>
         )

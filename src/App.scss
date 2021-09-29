@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 $bg-primary: rgba(204, 204, 201, 0.6);
 $bg-tertiary: rgba(204, 204, 201, 0.9);
 $bg-secondary: rgba(108, 108, 100, 0.8);
@@ -32,6 +34,7 @@ $xl-breakpoint: 1200px;
 }
 
 .App {
+  
   text-align: center;
   color: white;
 }
@@ -63,12 +66,25 @@ $xl-breakpoint: 1200px;
   .App-header {
     display: flex;
     justify-content: flex-start;
+    // align-items: center;
     padding: 1rem;
+
+    a {
+      align-self: center;
+      margin-right: 3rem;
+      .fas{
+        font-size: 2rem;
+        color:white;
+      }
+    }
+
     img {
       width: 15rem;
     }
   }
 }
+
+
 .container-tiles{
   display: flex;
   justify-content: space-between;
@@ -95,6 +111,7 @@ $xl-breakpoint: 1200px;
 
   }
 }
+
 
 .newNotice{
   .inputNotice{
@@ -134,8 +151,18 @@ $xl-breakpoint: 1200px;
         }
 
       }
+
     }
   }
+}
+
+button{
+  font-family: 'Titillium Web', sans-serif;
+  background-color: #57b343;
+  border: 0.5rem  solid #57b343;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -145,18 +172,25 @@ $xl-breakpoint: 1200px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
   }
 }
 
-i{
-  color:white;
-}
+
 
 .noticeDetails{
   background-color: $bg-secondary;
   border-radius: 1rem;
   color: white;
   padding: 1rem;
+  .wrapper-notice{
+    border: 0.3rem solid #54544c;
+    border-radius: 0.5rem;
+  }
+}
+
+.noticeList{
+  color: black;
 }
 
 
