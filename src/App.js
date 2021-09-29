@@ -19,9 +19,7 @@ const tiles = [
 export default class App extends Component {
 
   handleClick(action) {
-    // if (action === "newNotice"){
-    //   this.props.addNotice();
-    // }
+
     this.props.history.push(action);
   }
 
@@ -50,14 +48,4 @@ export default class App extends Component {
     );
   }
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//       addNotice: () => {
-//           dispatch(addNotice())
-//       }
-//   }
-// }
-
-// export default connect(null,mapDispatchToProps)(App);
 
