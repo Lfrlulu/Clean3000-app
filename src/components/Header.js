@@ -3,10 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../img/logo-clean3000-transparent.png';
 import { Link } from 'react-router-dom';
 
-export const Header = ({ history, isHome = false }) => {
-    const goToHome = () => {
-        history.push(`/`);
-    }
+export const Header = ({ isHome = false }) => {
 
     return (
 
