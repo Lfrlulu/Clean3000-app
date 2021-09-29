@@ -3,10 +3,42 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { NotFound } from './components/NotFound';
+import NewNotice from './components/NewNotice';
+import NoticeList from './components/NoticeList';
+import { createStore } from 'redux';
+import rootReducer from "./reducers";
+import { Provider } from 'react-redux';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+
+// Création du store via Redux
+const store = createStore(
+  rootReducer,
+  // Ligne suivante indispensable pour voir apparaitre votre store dans l'extension Redux DevTools
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()  
+);
+
+const Root = () => (
+  <Router>
+    <Switch>
+      <Route exact path='/' component={App}/>
+      <Route exact path='/newNotice' component={NewNotice}/>
+      <Route exact path='/noticeList' component={NoticeList}/>
+      <Route component={NotFound} />
+    </Switch>
+  </Router>
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Root />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

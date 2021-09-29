@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header{
+  background-color: rgba(204, 204, 201, 0.6);
+  .App-header{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    img{
+      width: 15rem;
+    }
+}
+}
+
+
