@@ -16,12 +16,12 @@ const tiles = [
   },
 ];
 
-class App extends Component {
+export default class App extends Component {
 
   handleClick(action) {
-    if (action === "newNotice"){
-      this.props.addNotice();
-    }
+    // if (action === "newNotice"){
+    //   this.props.addNotice();
+    // }
     this.props.history.push(action);
   }
 
@@ -41,19 +41,23 @@ class App extends Component {
         <Header
           isHome={true}
         />
-        {tilesDisplay}
+        <div className="container padding-top-5">
+          <div className="container-tiles">
+            {tilesDisplay}
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-      addNotice: () => {
-          dispatch(addNotice())
-      }
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//       addNotice: () => {
+//           dispatch(addNotice())
+//       }
+//   }
+// }
 
-export default connect(null,mapDispatchToProps)(App);
+// export default connect(null,mapDispatchToProps)(App);
 

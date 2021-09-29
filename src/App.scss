@@ -1,23 +1,162 @@
+$bg-primary: rgba(204, 204, 201, 0.6);
+$bg-tertiary: rgba(204, 204, 201, 0.9);
+$bg-secondary: rgba(108, 108, 100, 0.8);
+
+// breakpoints
+
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 991px;
+$xl-breakpoint: 1200px;
+
+@for $i from 1 through 20 {
+  .padding-#{$i}{
+    padding: 1rem * $i;
+  }
+}
+
+@for $i from 1 through 20 {
+  .padding-top-#{$i}{
+    padding-top: 1rem * $i;
+  }
+}
+
+@for $i from 1 through 20 {
+  .margin-top-#{$i}{
+    margin-top: 1rem * $i;
+  }
+}
+
+#root{
+  color: white;
+}
+
 .App {
   text-align: center;
-  
+  color: white;
 }
 
-.container{
-  max-width: 1200px;
+.container {
+  max-width: 450px;
   margin: 0 auto;
+
+  @media screen and (min-width:$sm-breakpoint){
+    max-width: 500px;
+  }
+
+  @media screen and (min-width:$md-breakpoint){
+    max-width: 680px;
+  }
+
+  @media screen and (min-width:$lg-breakpoint){
+    max-width: 900px;
+  }
+
+  @media screen and (min-width:$xl-breakpoint){
+    max-width: 1200px;
+  }
+
 }
 
-.header{
-  background-color: rgba(204, 204, 201, 0.6);
-  .App-header{
+.header {
+  background-color: $bg-primary;
+  .App-header {
     display: flex;
     justify-content: flex-start;
     padding: 1rem;
-    img{
+    img {
       width: 15rem;
     }
+  }
 }
+.container-tiles{
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width:$lg-breakpoint){
+    flex-direction: column;
+    min-height: 28rem;
+  }
+  .tile{
+    cursor: pointer;
+    border-radius: 1rem;
+    flex-basis: 45%;
+    background-color: $bg-secondary;
+    @media screen and (min-width:$lg-breakpoint){
+      min-height: 15rem;
+    }
+    .container-img{
+      display: flex;
+
+      img{
+        width: 5rem;
+  
+      }
+    }
+
+  }
+}
+
+.newNotice{
+  .inputNotice{
+    background-color: $bg-secondary;
+    border-radius: 1rem;
+    form{
+      @media screen and (max-width:$lg-breakpoint){
+        display: flex;
+        flex-direction: column;
+
+      }
+      .input-container{
+
+        @media screen and (max-width:$lg-breakpoint){
+          display: flex;
+          flex-direction: column;
+          
+        }
+
+        @media screen and (min-width:$lg-breakpoint){
+          display: flex;
+          justify-content: space-between;
+          
+        }
+        input{
+          @media screen and (min-width:$xl-breakpoint){
+            min-width: 10rem;
+            
+          }
+        }
+      }
+
+      .container-signature{
+        @media screen and (min-width:$md-breakpoint){
+          display: flex;
+          justify-content: space-around;
+        }
+
+      }
+    }
+  }
+}
+
+
+.notice{
+  .notice-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+i{
+  color:white;
+}
+
+.noticeDetails{
+  background-color: $bg-secondary;
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem;
 }
 
 

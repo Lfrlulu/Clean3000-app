@@ -1,4 +1,4 @@
-import { ADD_NOTICE } from "../actions/types";
+import { ADD_NOTICE, FILL_NOTICE } from "../actions/types";
 
 const initialState = {
     notices : [],
@@ -6,7 +6,12 @@ const initialState = {
 
 export default function rootReducer(state = initialState, action) {
     switch (action.type){
-        case ADD_NOTICE:
+        // case ADD_NOTICE:
+        //     return{
+        //         notices: [...state.notices, action.payload]
+        //     };
+
+        case FILL_NOTICE:
             return{
                 notices: [...state.notices, action.payload]
             };

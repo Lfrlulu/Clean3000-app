@@ -9,6 +9,7 @@ import NoticeList from './components/NoticeList';
 import { createStore } from 'redux';
 import rootReducer from "./reducers";
 import { Provider } from 'react-redux';
+import Notice from './components/Notice';
 
 import {
   BrowserRouter as Router,
@@ -28,6 +29,7 @@ const Root = () => (
     <Switch>
       <Route exact path='/' component={App}/>
       <Route exact path='/newNotice' component={NewNotice}/>
+      <Route exact path='/notice/:id' component={Notice}/>
       <Route exact path='/noticeList' component={NoticeList}/>
       <Route component={NotFound} />
     </Switch>
