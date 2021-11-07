@@ -146,6 +146,8 @@ $xxl-breakpoint: 1400px;
           
         }
         input{
+          flex-basis: 20%;
+          border: 1px solid black;
           @media screen and (min-width:$xl-breakpoint){
             min-width: 10rem;
             
