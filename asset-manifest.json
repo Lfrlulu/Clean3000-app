@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Clean3000-app/static/css/main.69ed2715.chunk.css",
+    "main.js": "/Clean3000-app/static/js/main.2cd3f82b.chunk.js",
+    "main.js.map": "/Clean3000-app/static/js/main.2cd3f82b.chunk.js.map",
+    "runtime-main.js": "/Clean3000-app/static/js/runtime-main.c750f72f.js",
+    "runtime-main.js.map": "/Clean3000-app/static/js/runtime-main.c750f72f.js.map",
+    "static/js/2.ebd55bc9.chunk.js": "/Clean3000-app/static/js/2.ebd55bc9.chunk.js",
+    "static/js/2.ebd55bc9.chunk.js.map": "/Clean3000-app/static/js/2.ebd55bc9.chunk.js.map",
+    "static/js/3.89fd982b.chunk.js": "/Clean3000-app/static/js/3.89fd982b.chunk.js",
+    "static/js/3.89fd982b.chunk.js.map": "/Clean3000-app/static/js/3.89fd982b.chunk.js.map",
+    "index.html": "/Clean3000-app/index.html",
+    "static/css/main.69ed2715.chunk.css.map": "/Clean3000-app/static/css/main.69ed2715.chunk.css.map",
+    "static/js/2.ebd55bc9.chunk.js.LICENSE.txt": "/Clean3000-app/static/js/2.ebd55bc9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Clean3000-app/static/media/leaves.e4a54e5e.png",
+    "static/media/logo-clean3000-transparent.315aa87a.png": "/Clean3000-app/static/media/logo-clean3000-transparent.315aa87a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c750f72f.js",
+    "static/js/2.ebd55bc9.chunk.js",
+    "static/css/main.69ed2715.chunk.css",
+    "static/js/main.2cd3f82b.chunk.js"
+  ]
+}
