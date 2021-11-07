@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class NoticeDetails extends Component {
     render() {
         return (
-            <div className="noticeDetails">
+            <div className="noticeDetails margin-top-2">
                 <h1>Avis de passage</h1>
                 <div className="wrapper-notice padding-1">
                     <p>

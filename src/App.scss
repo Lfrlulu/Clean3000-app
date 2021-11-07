@@ -10,6 +10,7 @@ $sm-breakpoint: 576px;
 $md-breakpoint: 768px;
 $lg-breakpoint: 991px;
 $xl-breakpoint: 1200px;
+$xxl-breakpoint: 1400px;
 
 @for $i from 1 through 20 {
   .padding-#{$i}{
@@ -39,27 +40,32 @@ $xl-breakpoint: 1200px;
   color: white;
 }
 
-.container {
-  max-width: 450px;
-  margin: 0 auto;
+  .container {
+    margin: 0 auto;
+    max-width: 120rem;
 
-  @media screen and (min-width:$sm-breakpoint){
-    max-width: 500px;
+    @media screen and (max-width:$sm-breakpoint){
+      // which max width for extra small device like my phone???
+      max-width: 80%;
+    }
+
+    @media screen and (min-width:$sm-breakpoint){
+      max-width: 540px;
+    }
+
+    @media screen and (min-width:$md-breakpoint){
+      max-width: 720px;
+    }
+
+    @media screen and (min-width:$lg-breakpoint){
+      max-width: 960px;
+    }
+
+    @media screen and (min-width:$xxl-breakpoint){
+      max-width: 1320px;
+    }
+
   }
-
-  @media screen and (min-width:$md-breakpoint){
-    max-width: 680px;
-  }
-
-  @media screen and (min-width:$lg-breakpoint){
-    max-width: 900px;
-  }
-
-  @media screen and (min-width:$xl-breakpoint){
-    max-width: 1200px;
-  }
-
-}
 
 .header {
   background-color: $bg-primary;
@@ -99,6 +105,9 @@ $xl-breakpoint: 1200px;
     background-color: $bg-secondary;
     @media screen and (min-width:$lg-breakpoint){
       min-height: 15rem;
+    }
+    @media screen and (max-width:$md-breakpoint){
+      margin-bottom: 2rem;
     }
     .container-img{
       display: flex;
@@ -191,6 +200,10 @@ button{
 
 .noticeList{
   color: black;
+}
+
+.none{
+  display: none;
 }
 
 

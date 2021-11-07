@@ -7,10 +7,26 @@ let i = 0;
 
 class NoticeList extends Component {
 
+    state = {
+        selectedNotice : {}, 
+        noticeSelected : false
+    }
+
+    handleChange(event){
+        const id = event.target.value;
+        console.log(id);
+        const index = this.props.notices.findIndex(notice => {
+            return notice.id === id;
+            
+        });
+        console.log(index);
+        this.setState({ selectedNotice : this.props.notices[index] , noticeSelected : true} )
+    }
+
     render() {
-        const selectOptions = this.props.notices.map((notice, j)=> {
+        const selectOptions = this.props.notices.map((notice)=> {
             return(
-                <option value={j} >{`${notice.id} - ${notice.serviceDate}`}</option>
+                <option key={notice.id} value={notice.id}>{`${notice.id} - ${notice.serviceDate}`}</option>
             )
         })
 
@@ -20,12 +36,15 @@ class NoticeList extends Component {
                 <Header/>
                 <div className="container">
                     <h2>Choississez votre Avis de passage</h2>
-                    <select name="" id="" onChange={(e)=>{this.setState({ j: e.target.value })}}>
+                    <select name="" id="" onChange={(e)=>this.handleChange(e)}>
+                        <option value=""></option>
                         {selectOptions}
                     </select>
-                    <NoticeDetails
-                        notice={this.props.notices[i]}
-                    />
+                    <div className={this.state.noticeSelected ? "container-notice" : "none"}>
+                        <NoticeDetails
+                            notice={this.state.selectedNotice}
+                        />
+                    </div>
                 </div>
             </div>
         )

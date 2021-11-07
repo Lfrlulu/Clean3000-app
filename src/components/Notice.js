@@ -16,10 +16,8 @@ class Notice extends Component {
         return (
             <div className="notice">
                 <Header/>
-                <div className="container padding-5">
+                <div className="container">
                     <div className="notice-container">
-
-
                         <NoticeDetails
                             ref={el => (this.componentRef = el)}
                             notice={this.props.notices[index]}
