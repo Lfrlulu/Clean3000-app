@@ -3,8 +3,6 @@ import { Header } from './Header'
 import { connect } from 'react-redux';
 import { NoticeDetails } from './NoticeDetails';
 
-let i = 0;
-
 class NoticeList extends Component {
 
     state = {

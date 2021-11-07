@@ -2,8 +2,6 @@ import { Component } from 'react';
 import './App.scss';
 import { Header } from './components/Header'
 import { Tile } from './components/Tile';
-import { addNotice } from './actions';
-import { connect } from 'react-redux';
 
 const tiles = [
   {

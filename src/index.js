@@ -11,8 +11,11 @@ import rootReducer from "./reducers";
 import { Provider } from 'react-redux';
 import Notice from './components/Notice';
 
+
+// Hashrouter permet de creer les routes avec github pages
+import { HashRouter as Router } from 'react-router-dom';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom';
